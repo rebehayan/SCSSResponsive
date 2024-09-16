@@ -1,0 +1,59 @@
+@use "../abstracts/" as *;
+@use "../layout/align" as *;
+
+@layer Components.Visual {
+  .visual {
+    background-color: $yellow;
+    > div {
+      @extend .mxauto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: rem(320);
+      position: relative;
+      @include mobile {
+        height: rem(255);
+        text-align: center;
+        border-top: rem(1) solid rgba($white, 0.3);
+      }
+      &::after {
+        @include position(a, right, 0, top, rem(12));
+        content: "";
+        width: 50%;
+        height: calc(100% + rem(50));
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+    &__title {
+      color: $white;
+      font-size: rem(72);
+      letter-spacing: rem(-3.6);
+      font-weight: 400;
+      @include mobile {
+        font-size: rem(50);
+        letter-spacing: rem(-2.5);
+      }
+    }
+    &__copy {
+      display: none;
+      color: $white;
+      font-size: rem(24);
+      font-weight: 500;
+      letter-spacing: rem(-1.2);
+      @include mobile {
+        display: block;
+      }
+    }
+    @for $index from 1 through 6 {
+      &.sub#{$index} {
+        > div {
+          &::after {
+            @include background("img_visual#{$index}.png", right 0 bottom 0, null, auto);
+          }
+        }
+      }
+    }
+  }
+}

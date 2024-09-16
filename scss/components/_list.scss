@@ -1,0 +1,19 @@
+@use "../abstracts/" as *;
+@use "./text" as *;
+
+$listStyle: (
+  1: (
+    "className": ".list-type4",
+    "marker": "dot",
+    "color": gray,
+    "textType": ".text-type3",
+    "width": 4,
+    "height": 4,
+    "radius": 100,
+    "margin": rem(10) rem(4) 0,
+  ),
+);
+
+@layer Components.List {
+  @include listStyle($listStyle, 1);
+}

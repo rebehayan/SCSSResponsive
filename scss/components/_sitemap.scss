@@ -1,0 +1,84 @@
+@use "../abstracts/" as *;
+
+@layer Components.Sitemap {
+  .sitemap {
+    display: none;
+    @include mobile {
+      display: grid;
+      width: auto;
+      height: auto;
+      padding: rem(90) rem(30);
+      background-color: $yellow;
+      inset: rem(94) 0 0 100%;
+      transition: 0.5s allow-discrete;
+      border: none;
+      overflow-y: auto;
+      overflow-x: hidden;
+      summary {
+        list-style: none;
+        white-space: nowrap;
+      }
+
+      &:popover-open {
+        inset: rem(94) 0 0 0;
+        @starting-style {
+          inset: rem(94) 0 0 100%;
+        }
+      }
+      &__nav {
+        padding-inline: rem(100);
+        overflow-y: auto;
+        overflow-x: hidden;
+        @include scroll(5, 10, rgba($white, 0.5));
+
+        > ul {
+          > li {
+            border-bottom: rem(1) solid rgba($white, 0.5);
+            summary {
+              color: $white;
+              font-size: rem(46);
+              font-weight: 700;
+              line-height: 100%;
+              padding-block: rem(34);
+            }
+          }
+        }
+        .depth2 {
+          ul {
+            display: grid;
+            gap: rem(34);
+            margin-block: rem(34);
+          }
+          > ul {
+            > li {
+              > a {
+                color: $white;
+                font-size: rem(34);
+                font-weight: 700;
+                line-height: 1;
+              }
+            }
+            ul {
+              a {
+                display: grid;
+                grid-template-columns: rem(20) 1fr;
+                color: #fff387;
+                font-size: rem(30);
+                &::before {
+                  content: "";
+                  width: rem(7);
+                  height: rem(7);
+                  border-radius: rem(10);
+                  background-color: #fff387;
+                  align-self: start;
+                  justify-self: center;
+                  margin-top: rem(19);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
