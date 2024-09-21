@@ -31,8 +31,8 @@
       }
     }
     &__list {
-      @include bar(line, 1, 16, #ccc, 20);
       justify-content: center;
+      @include bar(line, 1, 16, #ccc, 20);
       a {
         color: $gray66;
         font-size: rem(14);
