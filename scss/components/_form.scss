@@ -35,10 +35,17 @@ $radioCheckSetting: (
     "width": rem(26),
     "height": rem(26),
   ),
+  2: (
+    "className": ".check-type2",
+    "offImage": "bg_check_off2.svg",
+    "onImage": "bg_check_on2.svg",
+    "width": rem(18),
+    "height": rem(18),
+  ),
 );
 
 %form {
-  height: map-get($formSettings, height);
+  height: var(--height, map-get($formSettings, height));
   border: map-get($formSettings, border);
   box-sizing: border-box;
   border-radius: map-get($formSettings, borderRadius);
@@ -59,16 +66,24 @@ $radioCheckSetting: (
   }
 }
 
-%label {
-  display: inline-flex;
-  gap: rem(4);
-  align-items: center;
-  color: #000;
-  font-size: rem(12);
-  line-height: 1;
-  letter-spacing: rem(-0.5);
-}
 @layer Components.Form {
+  %label {
+    display: inline-flex;
+    gap: rem(4);
+    align-items: center;
+    color: #000;
+    font-size: rem(12);
+    line-height: 1;
+    letter-spacing: rem(-0.5);
+    .login & {
+      color: $gray66;
+      font-size: rem(14);
+      font-weight: 300;
+      line-height: rem(16);
+      letter-spacing: rem(-0.7);
+    }
+  }
+
   .input {
     @extend %form;
     width: var(--w, 100%);

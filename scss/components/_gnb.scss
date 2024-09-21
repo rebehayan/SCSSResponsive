@@ -6,6 +6,9 @@
     @include mobile {
       display: none;
     }
+    @include container(body, 1135px) {
+      justify-self: center;
+    }
     > ul {
       display: flex;
       gap: rem(40);

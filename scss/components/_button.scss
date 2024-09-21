@@ -11,6 +11,14 @@ $buttonSize: (
     "borderWidth": 1,
     "fontWeight": 700,
   ),
+  2: (
+    "className": ".lg",
+    "height": 60,
+    "fontSize": 16,
+    "paddingInline": 33,
+    "borderWidth": 1,
+    "fontWeight": 700,
+  ),
 );
 // 버튼 색상 정의
 $buttonColor: (
@@ -32,15 +40,21 @@ $buttonColor: (
     "color": $gray99,
     "borderColor": $gray99,
   ),
+  4: (
+    "className": ".black",
+    "bgColor": $gray33,
+    "color": $white,
+    "borderColor": $gray33,
+  ),
 );
 // 버튼 아이콘 정의
 $buttonIcon: (
   1: (
     "className": ".ico1",
     "direction": after,
-    "imgName": "ico_book.svg",
-    "width": 16,
-    "height": 16,
+    "imgName": "ico_more.svg",
+    "width": 13,
+    "height": 13,
   ),
 );
 
@@ -121,6 +135,21 @@ $buttonIcon: (
     width: rem(30);
     height: rem(30);
     order: 1;
+  }
+
+  :is(.btn-prev, .btn-next) {
+    width: rem(36);
+    height: rem(36);
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+  .btn-prev {
+    @include background("ico_prev.svg");
+  }
+  .btn-next {
+    @include background("ico_next.svg");
   }
 
   .btn-group {

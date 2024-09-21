@@ -5,6 +5,10 @@
     @include a11y-hidden;
   }
   .table-type1 {
+    @include mobile {
+      margin-inline: rem($mobilePaddingX);
+      width: calc(100% - rem($mobilePaddingX * 2));
+    }
     thead {
       th {
         padding-block: rem(20);
@@ -28,6 +32,14 @@
         letter-spacing: rem(-0.32);
         text-align: center;
         border-bottom: rem(1) solid #f3f3f3;
+        &:has(a) {
+          text-align: left;
+        }
+        a {
+          @include mobile {
+            @include ellipsis;
+          }
+        }
       }
     }
   }
@@ -35,6 +47,9 @@
     @include mobile {
       colgroup {
         display: none;
+      }
+      &.mxmobile {
+        width: calc(100% - rem($mobilePaddingX * 2));
       }
     }
     thead {
@@ -99,6 +114,8 @@
   .table-type3 {
     border-top: rem(1) solid $gray33;
     @include mobile {
+      margin-inline: rem(30);
+      width: calc(100% - rem(60));
       border: none;
       colgroup {
         display: none;
@@ -128,6 +145,44 @@
       @include mobile {
         color: $gray66;
       }
+    }
+    td {
+      color: $gray99;
+      @include mobile {
+        padding-top: rem(10);
+      }
+    }
+  }
+  .table-type4 {
+    @include mobile {
+      margin-inline: rem(30);
+      width: calc(100% - rem($mobilePaddingX * 2));
+      colgroup {
+        display: none;
+      }
+    }
+    tr {
+      border-bottom: rem(1) solid #e1e1e1;
+      @include mobile {
+        display: block;
+        padding-block: rem(30);
+      }
+    }
+    :is(th, td) {
+      padding: rem(30);
+      font-size: rem(16);
+      line-height: rem(14);
+      @include mobile {
+        display: block;
+        padding: 0;
+        font-size: rem(26);
+        line-height: 1.8;
+      }
+    }
+    th {
+      color: $gray33;
+      text-align: left;
+      font-weight: 500;
     }
     td {
       color: $gray99;

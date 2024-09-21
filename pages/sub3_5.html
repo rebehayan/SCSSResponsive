@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>스타일가이드</title>
+    <title>매뉴얼 및 조직도 | 사이트명</title>
     <link rel="stylesheet" href="../css/style.css" />
     <script type="module" src="../js/global.js"></script>
   </head>
@@ -147,10 +147,10 @@
       <a href="" class="btn-login">로그인</a>
     </div>
     <main>
-      <div class="visual sub1">
+      <div class="visual sub3">
         <div>
-          <h2 class="visual__title">소년소녀부</h2>
-          <p class="visual__copy">‘지지 않는 마음’을 품은 태양 초등 소년소녀부</p>
+          <h2 class="visual__title">미래본부 및 사명회</h2>
+          <p class="visual__copy">‘지지 않는 마음’을 품은 태양 초등 소년소녀부 소년소녀부</p>
         </div>
       </div>
       <div class="breadcrumbs">
@@ -165,7 +165,7 @@
           <ul class="breadcrumbs__mobile">
             <li>
               <button popovertarget="breadcrumbs1">소년소녀부</button>
-              <ul popover id="breadcrumbs1" class="depth2">
+              <ul popover="" id="breadcrumbs1" class="depth2">
                 <li>
                   <a href="">소년소녀부</a>
                   <ul>
@@ -180,7 +180,7 @@
             </li>
             <li>
               <button popovertarget="breadcrumbs2">소년소녀부</button>
-              <ul popover id="breadcrumbs2" class="depth2">
+              <ul popover="" id="breadcrumbs2" class="depth2">
                 <li>
                   <a href="">소년소녀부</a>
                   <ul>
@@ -197,144 +197,24 @@
         </div>
       </div>
       <div class="mxauto container">
-        <h2>텍스트 가이드</h2>
-        <h3 class="heading base">제목 base</h3>
-        <p class="subtitle">서브제목</p>
-
-        <h3 class="heading xs">제목 xs</h3>
-        <h3 class="heading xxs">제목 xxs</h3>
-
-        <p class="text-type1">text-type1</p>
-        <p class="text-type2">text-type2</p>
-
-        <h2>버튼가이드</h2>
-        <button class="btn primary base">.base</button>
-        <button class="btn primary base">.primary</button>
-        <button class="btn secondary base">.secondary</button>
-        <button class="btn gray base">.gray</button>
-
-        <h2>뱃지가이드</h2>
-        <span class="badge base orange">.orange</span>
-        <span class="badge base skyblue">.skyblue</span>
-        <span class="badge base green">.green</span>
-        <span class="badge base blue">.blue</span>
-        <span class="badge base gray">.gray</span>
-        <span class="badge base darkgray">.darkgray</span>
-
-        <h2>Form 가이드</h2>
-        <input class="input" type="text" value="value" /><br />
-        <input class="input" type="text" placeholder="placeholder" /><br />
-        <input class="input" type="text" disabled value="disabled" /><br />
-        <input class="input" type="text" readonly value="readonly" /><br />
-        <select class="select">
-          <option value="">선택하세요.</option>
-        </select>
-        <br />
-        <textarea class="textarea" name="" id=""></textarea>
-        <br />
-        <input type="checkbox" name="" class="check-type1" id="chk1_1" checked /><label for="chk1_1">선택하세요.</label><br />
-        <input type="checkbox" name="" class="check-type1" id="chk1_2" /><label for="chk1_2">선택하세요.</label>
-
-        <h2>표 가이드</h2>
-        <div class="scroll-table">
-          <table class="table-type1">
-            <caption>
-              게시판 리스트
-            </caption>
-            <colgroup>
-              <col />
-              <col style="width: 12rem" />
-              <col style="width: 15rem" />
-            </colgroup>
-            <thead>
-              <tr>
-                <th>제목</th>
-                <th>제목</th>
-                <th>제목</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>내용</td>
-                <td>내용</td>
-                <td>내용</td>
-              </tr>
-              <tr>
-                <td colspan="3">현재 게시물이 존재하지 않습니다.</td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- 본문시작 -->
+        <div class="tabs">
+          <nav>
+            <ul class="tab-type1" role="tablist">
+              <li><input type="radio" name="tab1" role="button" checked id="tab1_1" data-tab="1" /><label for="tab1_1">미래본부 소개</label></li>
+              <li><input type="radio" name="tab1" role="button" id="tab1_2" data-tab="2" /><label for="tab1_2">담당이 된다면</label></li>
+              <li><input type="radio" name="tab1" role="button" id="tab1_3" data-tab="3" /><label for="tab1_3">미래본부 주요활동</label></li>
+              <li><input type="radio" name="tab1" role="button" id="tab1_4" data-tab="4" disabled aria-hidden="true" /><label for="tab1_4" role="link">소년소녀부원회 개최</label></li>
+              <li><input type="radio" name="tab1" role="button" id="tab1_5" data-tab="5" /><label for="tab1_5">가정방문 및 개인대화</label></li>
+            </ul>
+          </nav>
+          <div class="tab-content" role="tabpanel" data-tab-content="1">탭1</div>
+          <div class="tab-content" role="tabpanel" data-tab-content="2">탭2</div>
+          <div class="tab-content" role="tabpanel" data-tab-content="3">탭3</div>
+          <div class="tab-content" role="tabpanel" data-tab-content="4">탭4</div>
+          <div class="tab-content" role="tabpanel" data-tab-content="5">탭5</div>
         </div>
-        <br />
-        <br />
-        <br />
-        <table class="table-type2">
-          <caption>
-            표제목
-          </caption>
-          <colgroup>
-            <col style="width: 10rem" />
-            <col style="width: 20rem" />
-            <col />
-            <col style="width: 30rem" />
-          </colgroup>
-          <thead>
-            <tr>
-              <th>제목1</th>
-              <th>제목2</th>
-              <th>제목3</th>
-              <th>제목4</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>내용1</td>
-              <td>내용1</td>
-              <td>내용1</td>
-              <td>내용1</td>
-            </tr>
-            <tr>
-              <td>내용2</td>
-              <td>내용2</td>
-              <td>내용2</td>
-              <td>내용2</td>
-            </tr>
-          </tbody>
-        </table>
-        <br />
-        <br />
-        <br />
-        <table class="table-type3">
-          <caption>
-            표제목
-          </caption>
-          <colgroup>
-            <col style="width: 20rem" />
-            <col />
-          </colgroup>
-          <tbody>
-            <tr>
-              <th>제목</th>
-              <td>내용</td>
-            </tr>
-            <tr>
-              <th>제목</th>
-              <td>내용</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2>팝업</h2>
-        <button class="btn base primary" popovertarget="dialog1" popovertargetaction="show">팝업열기</button>
-        <div class="dialog-type1" role="dialog" popover id="dialog1">
-          <strong class="dialog-type1__title">일치하는 회원정보가 없습니다.</strong>
-          <p class="dialog-type1__text">입력하신 정보와 일치하는 회원정보가 없습니다.<br />정확한 로그인정보를 입력하세요.</p>
-
-          <div class="btn-group">
-            <button class="btn base secondary" popovertarget="dialog1" popovertargetaction="hide">확인</button>
-          </div>
-          <button class="btn-close" popovertarget="dialog1" popovertargetaction="hide" aria-label="닫기"></button>
-        </div>
+        <!-- 본문끝 -->
       </div>
     </main>
     <footer class="footer">

@@ -46,11 +46,54 @@
         display: block;
       }
     }
-    @for $index from 1 through 6 {
+    @for $index from 0 through 6 {
       &.sub#{$index} {
         > div {
           &::after {
             @include background("img_visual#{$index}.png", right 0 bottom 0, null, auto);
+          }
+        }
+      }
+    }
+  }
+  body:has(.login) {
+    .visual {
+      text-align: center;
+      &__title {
+        position: relative;
+        z-index: 10;
+        font-family: $eng;
+        font-size: rem(70);
+        font-weight: 700;
+        line-height: normal;
+      }
+      &__copy {
+        position: relative;
+        z-index: 10;
+        display: block;
+      }
+      > div {
+        height: rem(500);
+        justify-content: start;
+        padding-top: rem(60);
+        box-sizing: border-box;
+        @include mobile {
+          height: rem(445);
+        }
+        &::after {
+          width: 100%;
+          height: rem(362);
+          background-position: center;
+          top: inherit;
+          bottom: 0;
+          @include mobile {
+            height: 100%;
+            padding-inline: rem(70);
+            box-sizing: border-box;
+            display: block;
+            background-size: calc(100% - rem(140)) auto;
+            background-position: center bottom;
+            background-clip: content-box;
           }
         }
       }

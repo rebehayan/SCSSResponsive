@@ -7,4 +7,12 @@
       padding-block: rem(100) rem(200);
     }
   }
+  body {
+    container: body / inline-size;
+  }
+  .mxmobile {
+    @include mobile {
+      margin-inline: rem($mobilePaddingX);
+    }
+  }
 }

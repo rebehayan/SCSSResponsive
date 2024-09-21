@@ -15,6 +15,9 @@
       grid-template-columns: min-content 1fr min-content;
       align-items: center;
       gap: rem(114);
+      @include container(body, 1135px) {
+        gap: 0;
+      }
     }
     .utillity {
       display: flex;
