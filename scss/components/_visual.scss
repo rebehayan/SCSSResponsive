@@ -16,6 +16,9 @@
         text-align: center;
         border-top: rem(1) solid rgba($white, 0.3);
         border: 1px solid red;
+        .ios & {
+          height: rem(255 / 2);
+        }
       }
       &::after {
         @include position(a, right, 0, top, rem(12));

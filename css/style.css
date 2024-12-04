@@ -1166,6 +1166,9 @@
       border-top: 0.1rem solid rgba(255, 255, 255, 0.3);
       border: 1px solid red;
     }
+    .ios .visual > div {
+      height: 12.75rem;
+    }
   }
   .visual > div::after {
     position: absolute;
@@ -1343,13 +1346,15 @@
       color: #000;
       font-size: 2.4rem;
       letter-spacing: -0.12rem;
-      border: 1px solid red;
     }
     .breadcrumbs__mobile > li > button[popovertarget=breadcrumbs1] {
       anchor-name: --bread1;
     }
     .breadcrumbs__mobile > li > button[popovertarget=breadcrumbs2] {
       anchor-name: --bread2;
+    }
+    .ios .breadcrumbs__mobile > li > button {
+      height: 5rem;
     }
     .breadcrumbs__mobile > li:last-child > button {
       color: #000;

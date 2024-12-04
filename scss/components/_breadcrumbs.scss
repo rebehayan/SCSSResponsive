@@ -45,12 +45,14 @@
             color: $black;
             font-size: rem(24);
             letter-spacing: rem(-1.2);
-            border: 1px solid red;
             &[popovertarget="breadcrumbs1"] {
               anchor-name: --bread1;
             }
             &[popovertarget="breadcrumbs2"] {
               anchor-name: --bread2;
+            }
+            .ios & {
+              height: rem(50);
             }
           }
           &:last-child {
