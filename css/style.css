@@ -152,6 +152,9 @@
     html {
       font-size: 31.25%;
     }
+    html:has(.ios) {
+      font-size: 31.25%;
+    }
   }
   body {
     font-size: 1rem;
@@ -1164,10 +1167,9 @@
       height: 25.5rem;
       text-align: center;
       border-top: 0.1rem solid rgba(255, 255, 255, 0.3);
-      border: 1px solid red;
     }
     .ios .visual > div {
-      height: 12.75rem;
+      height: 25.5rem;
     }
   }
   .visual > div::after {
@@ -1354,7 +1356,7 @@
       anchor-name: --bread2;
     }
     .ios .breadcrumbs__mobile > li > button {
-      height: 5rem;
+      height: 10rem;
     }
     .breadcrumbs__mobile > li:last-child > button {
       color: #000;

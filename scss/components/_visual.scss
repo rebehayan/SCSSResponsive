@@ -15,9 +15,8 @@
         height: rem(255);
         text-align: center;
         border-top: rem(1) solid rgba($white, 0.3);
-        border: 1px solid red;
         .ios & {
-          height: rem(255 / 2);
+          height: 25.5rem;
         }
       }
       &::after {

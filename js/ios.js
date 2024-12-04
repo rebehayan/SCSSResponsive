@@ -10,6 +10,5 @@ if (/iP(hone|od|ad)/.test(userAgent)) {
 }
 
 if (version) {
-  alert("ios입니다.");
   document.body.classList.add("ios");
 }
